@@ -5,8 +5,8 @@ const score = document.getElementById("score");
 var game = document.querySelector(".game");
 var counter = 0;
 
-var audio = document.getElementById('audio');
-audio.pla
+var audio = document.getElementById("audio");
+
 blueCar.addEventListener("animationiteration", function(){
     var random = ((Math.floor(Math.random() * 3)) * 130);
     blueCar.style.left = random + "px" ;
@@ -19,6 +19,7 @@ window.addEventListener("keydown", function(e){
         var raceCarLeft = parseInt(window.getComputedStyle(raceCar).getPropertyValue("left"));
      if(raceCarLeft < 260){
             raceCar.style.left = (raceCarLeft + 130) + "px" ;
+            audio.play();
      }   
     }
 
@@ -26,6 +27,7 @@ window.addEventListener("keydown", function(e){
         var raceCarLeft = parseInt(window.getComputedStyle(raceCar).getPropertyValue("left"));
      if(raceCarLeft > 0){
             raceCar.style.left = (raceCarLeft - 130) + "px" ;
+            audio.play();
      }   
     }
 
@@ -34,6 +36,7 @@ window.addEventListener("keydown", function(e){
      if(raceCarTop > -250){
             raceCar.style.top = (raceCarTop - 50) + "px" ;
             console.log(Math.value(raceCar.style.top));
+            audio.play();
      }   
     }
 
@@ -42,6 +45,7 @@ window.addEventListener("keydown", function(e){
      if(raceCarTop < 520){
             raceCar.style.top = (raceCarTop + 50) + "px" ;
             console.log(Math.value(raceCar.style.top));
+            audio.play();
      }   
     } 
   
